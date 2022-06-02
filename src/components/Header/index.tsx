@@ -79,7 +79,11 @@ export function Header() {
         <FakeSpace />
       </Container>
       <MobileHeader>
-        <Logo style={{ position: "absolute", left: 16, top: 16 }} />
+        {/* <Logo style={{ position: "absolute", left: 16, top: 16 }} /> */}
+        <img
+          src={require("../../assets/img/logo2.png")}
+          style={{ width: 150, position: "absolute", left: 16, top: 16 }}
+        />
         <input type="checkbox" id="active" />
         <label htmlFor="active" className="menu-btn">
           <span></span>

@@ -13,6 +13,8 @@ export const Container = styled.div`
     height: 600px;
     width: 100%;
 
+    display: flex;
+
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -32,9 +34,19 @@ export const Container = styled.div`
 
     /* background-color: red; */
 
-    img {
+    .build {
+      display: flex;
       width: 100%;
-      object-fit: contain;
+      height: 600px;
+
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 1200px;
+
+        /* object-fit: cover; */
+      }
     }
 
     p {

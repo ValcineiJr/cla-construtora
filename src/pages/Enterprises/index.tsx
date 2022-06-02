@@ -5,6 +5,8 @@ import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { FakeSpace } from "../../components/FakeSpace";
 
+import Carousel, { autoplayPlugin } from "@brainhubeu/react-carousel";
+
 import background from "../../assets/img/bg.jpg";
 import build from "../../assets/img/build2.jpg";
 
@@ -36,6 +38,8 @@ import phoneSVG from "../../assets/icons/phone.svg";
 import headsetSVG from "../../assets/icons/headset.svg";
 import checkSVG from "../../assets/icons/circle-check.svg";
 import envelopeSVG from "../../assets/icons/envelope.svg";
+import LogoWIMG from "../../assets/img/logo-white.png";
+import { ChevronArrow } from "../../components/Carosel/components/ChevronArrow";
 
 import "react-alice-carousel/lib/alice-carousel.css";
 import {
@@ -50,6 +54,7 @@ import {
 import { CarouselComponent } from "../../components/Carosel";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import { useState } from "react";
+import { Slider } from "../Home/styles";
 
 export function Enterprises() {
   const column1 = [
@@ -155,12 +160,24 @@ export function Enterprises() {
 
   const { width } = useWindowDimensions();
 
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <Container>
       <Header />
-      <header style={{ backgroundImage: `url(${background})` }} />
+      <header style={{ backgroundImage: `url(${background})` }}>
+        <FakeSpace size={width <= 1000 ? 5 : 22} />
+
+        <Slider style={{ marginTop: 210 }}>
+          <img src={LogoWIMG} className="logo" />
+
+          <div style={{ width: "100%" }}>
+            <p className="title">conheça o empreendimento</p>
+            <p className="one">Toda a estrutura de um imóvel</p>
+            <p className="two">de alto nível que você procura!</p>
+          </div>
+        </Slider>
+
+        <FakeSpace size={width <= 1000 ? 5 : 22} />
+      </header>
       <div className="container">
         <FakeSpace size={width <= 1000 ? 5 : 25} />
         <div className="content">
@@ -178,7 +195,10 @@ export function Enterprises() {
             voluptatibus reiciendis id, dignissimos commodi impedit aperiam vel
             neque praesentium.
           </p>
-          <img src={build} alt="imagem de um prédio" />
+          <div className="build">
+            <img src={build} alt="imagem de um prédio" />
+          </div>
+
           <div className="socials">
             <span className="color">Compartilhe este imóvel através de</span>
             <ul>

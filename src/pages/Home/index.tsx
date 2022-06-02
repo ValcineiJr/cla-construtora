@@ -12,6 +12,7 @@ import ZapWSVG from "../../assets/icons/whatsappWhite.svg";
 import background from "../../assets/img/bg.jpg";
 import BuildIMG from "../../assets/img/build.png";
 import LogoIMG from "../../assets/img/logo.png";
+import LogoWIMG from "../../assets/img/logo-white.png";
 
 import { Container, Main, Informations, EmptySpace, Slider } from "./styles";
 import { ChevronArrow } from "../../components/Carosel/components/ChevronArrow";
@@ -55,7 +56,9 @@ export function Home() {
       <Header />
       <header style={{ backgroundImage: `url(${background})` }}>
         <FakeSpace size={width <= 1000 ? 5 : 22} />
+
         <Slider>
+          <img src={LogoWIMG} className="logo" />
           <ChevronArrow onClick={handlePreviousClick} direction="left" />
           <Carousel
             plugins={[
@@ -81,6 +84,7 @@ export function Home() {
           </Carousel>
           <ChevronArrow onClick={handleNextClick} />
         </Slider>
+
         <FakeSpace size={width <= 1000 ? 5 : 22} />
       </header>
 

@@ -1,4 +1,7 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { ReactNode } from "react";
+
+import closeSVG from "../../assets/icons/close.svg";
 
 import styled from "styled-components";
 
@@ -22,8 +25,12 @@ const Modal = ({ show, onClose, children, title, onBackDropPress }: Props) => {
 
       <StyledModal>
         <StyledModalHeader>
-          <a href="#" onClick={handleCloseClick}>
-            Fechar
+          <a
+            href="#"
+            style={{ backgroundColor: "trasparent" }}
+            onClick={handleCloseClick}
+          >
+            <img src={closeSVG} width={35} height={35} alt="" />
           </a>
         </StyledModalHeader>
         {title && <h1>{title}</h1>}

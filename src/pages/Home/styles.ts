@@ -44,12 +44,14 @@ export const Informations = styled.div`
       img {
         display: none !important;
       }
-
+      height: auto;
       padding: 16px;
     }
     background-color: #fff;
+    height: 200px;
 
     display: flex;
+    justify-content: flex-start;
 
     /* flex: 1; */
     position: relative;
@@ -62,9 +64,9 @@ export const Informations = styled.div`
     margin-top: 40px;
 
     .build {
-      height: 180px;
+      height: 250px;
       bottom: 0;
-      left: 30px;
+      left: 10px;
       position: absolute;
     }
 
@@ -283,6 +285,20 @@ export const EmptySpace = styled.div<EmptyProps>`
 export const Slider = styled.div`
   margin-top: auto;
   margin-bottom: auto;
+  position: relative;
+
+  padding-top: 150px;
+
+  .logo {
+    position: absolute;
+
+    width: 150px;
+
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
 
   @media (max-width: 1000px) {
     align-items: center;

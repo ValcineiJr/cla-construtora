@@ -167,14 +167,15 @@ export const Container = styled.div`
 
       justify-content: center;
 
-      /* background-color: green; */
-
       .column > ul {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
-        flex: 1;
+
+        @media (max-width: 1000px) {
+          width: 250px !important;
+        }
 
         li {
           display: flex;

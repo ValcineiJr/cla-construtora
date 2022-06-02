@@ -78,6 +78,7 @@ export const Informations = styled.div`
     .infoWrapper {
       display: flex;
       flex-direction: column;
+      justify-content: center;
 
       p {
         font-size: 14px;

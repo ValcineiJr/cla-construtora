@@ -6,6 +6,17 @@ export const Container = styled.div`
     width: 100%;
     background-color: #00a2b9;
   }
+
+  p.title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 300;
+    color: ${({ theme }) => theme.colors.subTitle};
+  }
+  p.subtitle {
+    font-weight: 700;
+    color: ${({ theme }) => theme.colors.secondaryText};
+  }
   iframe {
     width: 100%;
     height: 480px;
@@ -16,6 +27,7 @@ export const Container = styled.div`
     height: 450px;
     width: 100%;
     padding-top: 250px;
+    margin-bottom: 30px;
 
     background-repeat: no-repeat;
     background-size: cover;

@@ -2,8 +2,10 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   header {
-    height: 600px;
+    height: 700px;
     width: 100%;
+
+    display: flex;
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -46,6 +48,7 @@ export const Informations = styled.div`
       padding: 16px;
     }
     background-color: #fff;
+
     display: flex;
 
     /* flex: 1; */
@@ -58,11 +61,16 @@ export const Informations = styled.div`
 
     margin-top: 40px;
 
-    img {
+    .build {
       height: 180px;
       bottom: 0;
       left: 30px;
       position: absolute;
+    }
+
+    .logo {
+      height: 50px;
+      margin-right: 30px;
     }
 
     .infoWrapper {
@@ -74,14 +82,15 @@ export const Informations = styled.div`
         text-align: left;
       }
 
-      button {
+      a {
         margin-top: 20px;
         margin-right: auto;
         padding: 6px 18px;
         color: ${({ theme }) => theme.colors.secondaryText};
         border-radius: 16px;
         border: 0;
-        cursor: pointer;
+        text-decoration: none;
+        background: #f2f2f2;
         font-size: 12px;
       }
     }
@@ -211,9 +220,12 @@ export const Informations = styled.div`
 
       .number {
         margin-left: 55px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
       }
 
-      button {
+      a {
         position: absolute;
         top: 0;
         bottom: 0;
@@ -221,6 +233,7 @@ export const Informations = styled.div`
         display: flex;
         align-items: center;
         height: 50px;
+        text-decoration: none;
 
         right: -80px;
 
@@ -232,7 +245,7 @@ export const Informations = styled.div`
         box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
       }
 
-      button > span {
+      a > span {
         color: #fff;
 
         margin-left: 10px;
@@ -267,57 +280,47 @@ export const EmptySpace = styled.div<EmptyProps>`
   flex: 0 0 ${({ value }) => value}%;
 `;
 
-export const ThirdRow = styled.div`
-  /* display: none; */
-  @media (min-width: 1000px) {
-    display: none;
-  }
-  padding: 20px 0;
+export const Slider = styled.div`
+  margin-top: auto;
+  margin-bottom: auto;
 
-  .number {
-    margin: 20px 0;
+  @media (max-width: 1000px) {
+    align-items: center;
   }
 
-  .infos {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  overflow-x: hidden;
 
-    .title {
-      font-weight: 300;
-      font-size: 26px;
-    }
-
-    .subtitle {
-      color: ${({ theme }) => theme.colors.secondaryText};
-      font-size: 26px;
-    }
-  }
+  flex: 1;
 
   display: flex;
-  background-color: #e5e5e5;
-  flex: 1;
-  flex-direction: column;
-  align-items: center;
 
-  button {
-    display: flex;
-    align-items: center;
-    height: 50px;
+  text-align: center;
 
-    padding: 0 30px;
-
-    border: 0;
-
-    background-color: ${({ theme }) => theme.colors.secondaryText};
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  .content {
   }
 
-  button > span {
-    color: #fff;
+  .title {
+    text-transform: uppercase;
+    color: #cecece;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
 
-    margin-left: 10px;
+  @media (max-width: 1000px) {
+    .one,
+    .two {
+      font-size: 30px !important;
+    }
+  }
 
-    border-radius: 5px;
+  .one {
+    font-size: 40px;
+    font-weight: 300;
+    color: white;
+  }
+  .two {
+    font-size: 40px;
+    font-weight: 700;
+    color: ${({ theme }) => theme.colors.secondaryText};
   }
 `;

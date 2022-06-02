@@ -1,12 +1,29 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import bgimage from "../../assets/img/bgimage.webp";
 
 interface ContainerProps {
   backgroundColor: string;
+  backgroundImage?: boolean;
 }
 
 export const Container = styled.div<ContainerProps>`
   display: flex;
   width: 100%;
+
+  padding-top: 60px;
+
+  ${({ backgroundImage }) =>
+    backgroundImage &&
+    css`
+      background-image: linear-gradient(
+          to bottom,
+          rgba(18, 42, 66, 0.86),
+          rgb(18, 42, 66)
+        ),
+        url(${bgimage});
+      background-size: cover;
+      background-repeat: no-repeat;
+    `}
 
   background-color: ${({ backgroundColor }) => backgroundColor};
   flex-direction: column;
@@ -35,7 +52,6 @@ export const Container = styled.div<ContainerProps>`
   }
 
   .carousel {
-    padding-top: 60px;
     span.text {
       color: white;
       text-align: center;

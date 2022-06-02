@@ -63,6 +63,13 @@ export function Contact() {
         </div>
         <FakeSpace size={width <= 1000 ? 5 : 0} />
       </header>
+      <p className="title">
+        Deseja mais informações sobre nossos empreendimentos?
+      </p>
+      <p className="title subtitle">
+        Preencha o formulário ou envie uma mensagem em nosso Whats App.
+      </p>
+
       <div className="wrapper">
         <FakeSpace size={width <= 1000 ? 5 : 25} />
         <Infos>

@@ -1,5 +1,5 @@
 import { Container } from "./styles";
 
-export function FakeSpace({ size = 25 }: { size?: number }) {
+export function FakeSpace({ size = 20 }: { size?: number }) {
   return <Container value={size} />;
 }

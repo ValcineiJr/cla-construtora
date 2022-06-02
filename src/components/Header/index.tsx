@@ -16,7 +16,10 @@ export function Header() {
       <Container>
         <FakeSpace />
         <div className="wrapper">
-          <Logo />
+          <img
+            src={require("../../assets/img/logo2.png")}
+            style={{ width: 150 }}
+          />
           <div className="menu">
             <div className="rowOne">
               <ul>
@@ -54,7 +57,7 @@ export function Header() {
                 className="iconBox"
               >
                 <a
-                  href="https://www.facebook.com"
+                  href="https://www.facebook.com/claconstrutora/"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -63,7 +66,7 @@ export function Header() {
               </div>
               <div className="iconBox">
                 <a
-                  href="https://www.instagram.com"
+                  href="https://www.instagram.com/c.l.a_construtora_/"
                   target="_blank"
                   rel="noreferrer"
                 >

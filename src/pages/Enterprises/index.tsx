@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 /* eslint-disable jsx-a11y/alt-text */
-import { useState, useRef } from "react";
 
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
@@ -9,10 +8,23 @@ import { FakeSpace } from "../../components/FakeSpace";
 import background from "../../assets/img/bg.jpg";
 import build from "../../assets/img/build2.jpg";
 
-import apartamento1 from "../../assets/img/apartamento1.jpg";
-import apartamento2 from "../../assets/img/apartamento2.jpg";
-import apartamento3 from "../../assets/img/apartamento3.jpg";
-import planta from "../../assets/img/planta.png";
+import apartamento1 from "../../assets/img/apartamento1.png";
+import apartamento2 from "../../assets/img/apartamento2.png";
+import apartamento3 from "../../assets/img/apartamento3.png";
+import apartamento4 from "../../assets/img/apartamento4.png";
+import apartamento5 from "../../assets/img/apartamento5.png";
+import apartamento6 from "../../assets/img/apartamento6.png";
+import apartamento7 from "../../assets/img/apartamento7.png";
+import apartamento8 from "../../assets/img/apartamento8.png";
+import apartamento9 from "../../assets/img/apartamento9.png";
+
+import planta1 from "../../assets/img/planta1.jpg";
+import planta2 from "../../assets/img/planta2.jpg";
+import planta3 from "../../assets/img/planta3.jpg";
+import planta4 from "../../assets/img/planta4.jpg";
+import planta5 from "../../assets/img/planta5.jpg";
+import planta6 from "../../assets/img/planta6.jpg";
+
 import location from "../../assets/img/location.png";
 
 import facebookSVG from "../../assets/icons/facebook-square.svg";
@@ -37,6 +49,7 @@ import {
 } from "./styles";
 import { CarouselComponent } from "../../components/Carosel";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
+import { useState } from "react";
 
 export function Enterprises() {
   const column1 = [
@@ -59,51 +72,39 @@ export function Enterprises() {
   ];
   const column3 = ["Quartos com suíte", "Closet"];
 
-  const slides2 = [
-    {
-      id: 0,
-
-      src: apartamento1,
-    },
-    {
-      id: 1,
-
-      src: apartamento2,
-    },
-    {
-      id: 2,
-
-      src: apartamento3,
-    },
-    {
-      id: 3,
-
-      src: apartamento1,
-    },
-    {
-      id: 3,
-
-      src: apartamento2,
-    },
-    {
-      id: 3,
-
-      src: apartamento3,
-    },
-  ];
-
   const blueprints = [
     {
       id: 0,
 
-      src: planta,
+      src: planta1,
     },
     {
       id: 1,
 
-      src: planta,
+      src: planta2,
+    },
+    {
+      id: 2,
+
+      src: planta3,
+    },
+    {
+      id: 3,
+
+      src: planta4,
+    },
+    {
+      id: 4,
+
+      src: planta5,
+    },
+    {
+      id: 5,
+
+      src: planta6,
     },
   ];
+
   const slides = [
     {
       id: 0,
@@ -123,11 +124,38 @@ export function Enterprises() {
     {
       id: 3,
 
-      src: apartamento1,
+      src: apartamento4,
+    },
+    {
+      id: 4,
+
+      src: apartamento5,
+    },
+    {
+      id: 5,
+
+      src: apartamento6,
+    },
+    {
+      id: 6,
+
+      src: apartamento7,
+    },
+    {
+      id: 7,
+
+      src: apartamento8,
+    },
+    {
+      id: 8,
+
+      src: apartamento9,
     },
   ];
 
   const { width } = useWindowDimensions();
+
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Container>
@@ -213,7 +241,7 @@ export function Enterprises() {
       </div>
 
       <div className="carousel">
-        <div className="wrapper">
+        <div className="wrapper img">
           <CarouselComponent
             space={width <= 1000 ? 5 : 25}
             backgroundColor="#263242"
@@ -222,6 +250,7 @@ export function Enterprises() {
             margin={10}
             title="Conheça nossos"
             subtitle="Apartamentos"
+            backgroundImage
           />
         </div>
         <div className="wrapper">
@@ -229,7 +258,7 @@ export function Enterprises() {
             space={width <= 1000 ? 5 : 0}
             numberOfSlides={width <= 1000 ? 1 : 5}
             backgroundColor="#F5F5F5"
-            slides={slides2}
+            slides={slides}
             margin={2}
             title="Imagens do empreendimento"
             titleStyle={{
@@ -242,43 +271,6 @@ export function Enterprises() {
           />
         </div>
 
-        <div className="wrapper">
-          <CarouselComponent
-            space={width <= 1000 ? 5 : 25}
-            backgroundColor="#fff"
-            numberOfSlides={width <= 1000 ? 1 : 3}
-            slides={slides}
-            margin={10}
-            title="Vídeos"
-            titleStyle={{
-              color: "#00A2B9",
-              marginTop: 20,
-              fontWeight: "bold",
-              fontSize: 28,
-              marginBottom: 20,
-            }}
-          />
-        </div>
-        <div className="wrapper">
-          <CarouselComponent
-            space={width <= 1000 ? 2 : 30}
-            type="side"
-            backgroundColor="#F7F7F7"
-            numberOfSlides={1}
-            slides={slides}
-            margin={10}
-            height={345}
-            size="flex"
-            title="Apartamentos decorados"
-            titleStyle={{
-              color: "#00A2B9",
-              marginTop: 20,
-              fontWeight: "bold",
-              fontSize: 28,
-              marginBottom: 20,
-            }}
-          />
-        </div>
         <div className="wrapper">
           <CarouselComponent
             space={width <= 1000 ? 5 : 30}
@@ -297,26 +289,7 @@ export function Enterprises() {
             }}
           />
         </div>
-        <div className="wrapper">
-          <CarouselComponent
-            space={width <= 1000 ? 2 : 30}
-            type="side"
-            backgroundColor="#F7F7F7"
-            numberOfSlides={1}
-            slides={slides}
-            margin={10}
-            height={345}
-            size="flex"
-            title="Implantação"
-            titleStyle={{
-              color: "#00A2B9",
-              marginTop: 20,
-              fontWeight: "bold",
-              fontSize: 28,
-              marginBottom: 20,
-            }}
-          />
-        </div>
+
         <div
           style={{
             backgroundColor: "#fff",
@@ -345,7 +318,7 @@ export function Enterprises() {
           allowFullScreen
           loading="lazy"
         ></iframe>
-        <div className="wrapper">
+        <div className="wrapper contact">
           <FakeSpace size={width <= 1000 ? 5 : 25} />
           <Form>
             <img className="env" src={envelopeSVG} alt="icone de envelope" />

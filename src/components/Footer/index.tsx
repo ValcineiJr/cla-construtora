@@ -29,7 +29,10 @@ export function Footer() {
             </li>
           </ul>
 
-          <Logo style={{ margin: "0 100px" }} />
+          <img
+            src={require("../../assets/img/logo2.png")}
+            style={{ margin: "0 100px", width: 150 }}
+          />
 
           <div className="location">
             <img src={MapSVG} alt="ícone de localização" />
@@ -56,7 +59,11 @@ export function Footer() {
         </div>
         <div className="thirdRow">
           <div className="iconBox">
-            <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.facebook.com/claconstrutora/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="14"
@@ -75,7 +82,7 @@ export function Footer() {
           </div>
           <div className="iconBox">
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/c.l.a_construtora_/"
               target="_blank"
               rel="noreferrer"
             >
@@ -109,7 +116,7 @@ export function Footer() {
           <div className="thirdRow">
             <div className="iconBox">
               <a
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/claconstrutora/"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -131,7 +138,7 @@ export function Footer() {
             </div>
             <div className="iconBox">
               <a
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/c.l.a_construtora_/"
                 target="_blank"
                 rel="noreferrer"
               >

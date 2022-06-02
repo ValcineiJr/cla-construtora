@@ -1,11 +1,20 @@
 import styled from "styled-components";
+import bgimage from "../../assets/img/bed.jpg";
 
 export const Container = styled.footer`
+  background-image: linear-gradient(
+      to bottom,
+      rgba(31, 31, 31, 0.92),
+      rgb(31, 31, 31)
+    ),
+    url(${bgimage});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   @media (max-width: 1000px) {
     display: none;
   }
 
-  background-color: #1f1f1f;
   flex: 1;
   display: flex;
 

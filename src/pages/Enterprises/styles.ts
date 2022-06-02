@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import bgimage2 from "../../assets/img/build4.jpg";
+
 export const Container = styled.div`
   iframe {
     width: 100%;
@@ -183,7 +185,15 @@ export const Container = styled.div`
     display: flex;
     width: 100%;
 
-    background-color: #263242;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(33, 50, 66, 0.6),
+        rgb(33, 50, 66)
+      ),
+      url(${bgimage2});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     flex-direction: column;
 
     border-bottom: 3px solid #00a2b9;
@@ -193,6 +203,9 @@ export const Container = styled.div`
       display: flex;
     }
 
+    .contact {
+    }
+
     .img-example-small {
       width: 80px;
       height: 50px;
@@ -200,7 +213,6 @@ export const Container = styled.div`
   }
 
   .carousel {
-    padding-top: 60px;
     span.text {
       color: white;
       text-align: center;

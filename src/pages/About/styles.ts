@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import bgimage from "../../assets/img/build3.jpg";
 
 export const Container = styled.main`
   header {
@@ -106,8 +107,19 @@ export const Container = styled.main`
       padding: 50px;
       color: white;
 
+      border-bottom: 3px solid #259fa1;
+
       margin-bottom: 80px;
       margin-top: 80px;
+
+      background-image: linear-gradient(
+          to bottom,
+          rgba(21, 170, 191, 0.86),
+          rgb(21, 170, 191)
+        ),
+        url(${bgimage});
+      background-size: cover;
+      background-repeat: no-repeat;
 
       @media (max-width: 1000px) {
         .row {

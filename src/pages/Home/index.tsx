@@ -57,33 +57,17 @@ export function Home() {
       <header style={{ backgroundImage: `url(${background})` }}>
         <FakeSpace size={width <= 1000 ? 5 : 22} />
 
-        <Slider>
+        <Slider style={{ marginTop: 210 }}>
           <img src={LogoWIMG} className="logo" />
-          <ChevronArrow onClick={handlePreviousClick} direction="left" />
-          <Carousel
-            plugins={[
-              "infinite",
-              "fastSwipe",
-              {
-                resolve: autoplayPlugin,
-                options: {
-                  interval: 3000,
-                },
-              },
-            ]}
-            value={current}
-            onChange={onChange}
-          >
-            {texts.map((item) => (
-              <div className="content" key={item.id}>
-                <p className="title">{item.title}</p>
-                <p className="one">{item.subtitleOne}</p>
-                <p className="two">{item.subtitleTwo}</p>
-              </div>
-            ))}
-          </Carousel>
-          <ChevronArrow onClick={handleNextClick} />
+
+          <div style={{ width: "100%" }}>
+            <p className="title">conheça o empreendimento</p>
+            <p className="one">Toda a estrutura de um imóvel</p>
+            <p className="two">de alto nível que você procura!</p>
+          </div>
         </Slider>
+
+        <img className="build-banner" src={BuildIMG} alt="" />
 
         <FakeSpace size={width <= 1000 ? 5 : 22} />
       </header>
@@ -145,12 +129,12 @@ export function Home() {
                 </div>
                 <div className="number">
                   <img src={ZapSVG} alt="ícone de whatsapp" />
-                  <span> 34 9822-0350</span>
+                  <span> (34) 98822-0350</span>
                 </div>
 
                 <a
                   target="_blank"
-                  href="https://api.whatsapp.com/send?phone=3498220350"
+                  href="https://api.whatsapp.com/send?phone=34988220350"
                   rel="noreferrer"
                 >
                   <img src={ZapWSVG} alt="ícone de whatsapp" />

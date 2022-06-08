@@ -39,6 +39,7 @@ import headsetSVG from "../../assets/icons/headset.svg";
 import checkSVG from "../../assets/icons/circle-check.svg";
 import envelopeSVG from "../../assets/icons/envelope.svg";
 import LogoWIMG from "../../assets/img/logo-white.png";
+import BuildIMG from "../../assets/img/build.png";
 import { ChevronArrow } from "../../components/Carosel/components/ChevronArrow";
 
 import "react-alice-carousel/lib/alice-carousel.css";
@@ -176,6 +177,8 @@ export function Enterprises() {
           </div>
         </Slider>
 
+        <img className="build-banner" src={BuildIMG} alt="" />
+
         <FakeSpace size={width <= 1000 ? 5 : 22} />
       </header>
       <div className="container">
@@ -198,34 +201,13 @@ export function Enterprises() {
           <div className="build">
             <img src={build} alt="imagem de um prédio" />
           </div>
-
-          <div className="socials">
-            <span className="color">Compartilhe este imóvel através de</span>
-            <ul>
-              <li>
-                <img src={whatsappSVG} alt="" />
-                <TextSocial color="#51C965">WhatsApp</TextSocial>
-              </li>
-              <li>
-                <img src={facebookSVG} alt="" />
-                <TextSocial color="#4C72BB">Facebook</TextSocial>
-              </li>
-              <li>
-                <img src={linkedinSVG} alt="" />
-                <TextSocial color="#3592C4">Linkedin</TextSocial>
-              </li>
-            </ul>
-          </div>
         </div>
         <FakeSpace size={width <= 1000 ? 5 : 25} />
       </div>
 
       <div className="box">
         <h1>O Empreendimento</h1>
-        <h2>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic aliquid
-          laudantium necessitatibus ratione, adipisci optio.
-        </h2>
+
         <div className="columns">
           <div className="column">
             <ul>
@@ -271,23 +253,6 @@ export function Enterprises() {
             title="Conheça nossos"
             subtitle="Apartamentos"
             backgroundImage
-          />
-        </div>
-        <div className="wrapper">
-          <CarouselComponent
-            space={width <= 1000 ? 5 : 0}
-            numberOfSlides={width <= 1000 ? 1 : 5}
-            backgroundColor="#F5F5F5"
-            slides={slides}
-            margin={2}
-            title="Imagens do empreendimento"
-            titleStyle={{
-              color: "#00A2B9",
-              marginTop: 20,
-              fontWeight: "bold",
-              fontSize: 28,
-              marginBottom: 20,
-            }}
           />
         </div>
 

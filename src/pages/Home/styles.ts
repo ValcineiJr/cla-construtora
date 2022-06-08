@@ -10,6 +10,16 @@ export const Container = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    /* position: relative; */
+
+    .build-banner {
+      position: absolute;
+      height: 700px;
+      right: 0;
+
+      opacity: 0.4;
+    }
   }
 `;
 

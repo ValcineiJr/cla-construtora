@@ -25,15 +25,11 @@ export function Header() {
               <ul>
                 <li>
                   <img src={ZapSVG} alt="ícone de whatsapp" />
-                  <span> 34 9822-0350</span>
+                  <span> (34) 98822-0350</span>
                 </li>
                 <li style={{ margin: "0 30px" }}>
                   <img src={PhoneSVG} alt="ícone de telefone" />
-                  <span> 34 9822-0350</span>
-                </li>
-                <li>
-                  <img src={MailSVG} alt="ícone de whatsapp" />
-                  <span> contato@clsconstrutora.com.br</span>
+                  <span> (34) 98822-0350</span>
                 </li>
               </ul>
             </div>

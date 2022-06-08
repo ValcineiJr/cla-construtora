@@ -21,11 +21,11 @@ export function Footer() {
           <ul>
             <li>
               <img src={ZapSVG} alt="ícone de whatsapp" />
-              <span> 34 9822-0350</span>
+              <span> (34) 98822-03500</span>
             </li>
             <li style={{ margin: "0 30px" }}>
               <img src={PhoneSVG} alt="ícone de telefone" />
-              <span> 34 9822-0350</span>
+              <span> (34) 98822-0350</span>
             </li>
           </ul>
 

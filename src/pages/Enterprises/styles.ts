@@ -18,6 +18,14 @@ export const Container = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    .build-banner {
+      position: absolute;
+      height: 600px;
+      right: 0;
+
+      opacity: 0.4;
+    }
   }
 
   .container {
@@ -122,6 +130,8 @@ export const Container = styled.div`
     display: flex;
     flex: 1;
     flex-direction: column;
+
+    margin-top: 60px;
 
     text-align: center;
 
